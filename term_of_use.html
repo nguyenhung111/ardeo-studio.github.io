@@ -1,95 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use - Ardeo Studio</title>
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --primary-hover: #1557b0;
+            --text-main: #202124;
+            --text-secondary: #5f6368;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --border-color: #dadce0;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            color: var(--text-main); 
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation (Đồng bộ với Trang chủ) */
+        header { 
+            padding: 20px 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            z-index: 1000;
+        }
+        .logo { 
+            font-size: 24px; 
+            font-weight: 700; 
+            color: var(--text-main); 
+            text-decoration: none; 
+            letter-spacing: -0.5px;
+        }
+        nav a { 
+            margin-left: 25px; 
+            text-decoration: none; 
+            color: var(--text-secondary); 
+            font-weight: 500; 
+            transition: color 0.2s ease;
+        }
+        nav a:hover, nav a.active { 
+            color: var(--primary-color); 
+        }
+
+        /* Legal Page Styles */
+        .page-header {
+            background-color: var(--bg-light);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .page-header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--text-main);
+        }
+        .legal-content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px 60px;
+            color: var(--text-secondary);
+        }
+        .legal-content h4 {
+            margin-top: 35px;
+            color: var(--text-main);
+            font-size: 1.25rem;
+        }
+        .legal-content a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .legal-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer { 
+            text-align: center; 
+            padding: 30px; 
+            background-color: #202124; 
+            color: #9aa0a6; 
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #bdc1c6;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; padding: 20px; }
+            nav a { margin: 0 10px; }
+        }
+    </style>
+</head>
 <body>
-<h4>Terms & Conditions</h4>
-<p>These terms and conditions apply to the mobile applications (hereby referred to as
-    "Applications") for mobile devices that were created by Ardeo Studio (hereby referred to as
-    "Service Provider") as Freemium services.</p>
 
-<p>Upon downloading or utilizing the Applications, you are automatically agreeing to the following
-    terms. It is strongly advised that you thoroughly read and understand these terms prior to using
-    the Applications. Unauthorized copying, modification of the Applications, any part of the
-    Applications, or our trademarks is strictly prohibited. Any attempts to extract the source code
-    of the Applications, translate the Applications into other languages, or create derivative
-    versions are not permitted. All trademarks, copyrights, database rights, and other intellectual
-    property rights related to the Applications remain the property of the Service Provider.</p>
+    <header>
+        <a href="index.html" class="logo">Ardeo Studio</a>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="index.html#apps">Ứng dụng</a>
+            <a href="privacy_policy.html">Bảo mật</a>
+            <a href="term_of_use.html" class="active">Điều khoản</a>
+        </nav>
+    </header>
 
-<p>The Service Provider is dedicated to ensuring that the Applications are as beneficial and efficient
-    as possible. As such, they reserve the right to modify the Applications or charge for their
-    services at any time and for any reason. The Service Provider assures you that any charges for
-    the Applications or their services will be clearly communicated to you.</p>
+    <div class="page-header">
+        <h1>Terms & Conditions</h1>
+    </div>
 
-<p>The Applications store and process personal data that you have provided to the Service Provider
-    in order to provide the Service. It is your responsibility to maintain the security of your
-    phone and access to the Applications. The Service Provider strongly advises against jailbreaking
-    or rooting your phone, which involves removing software restrictions and limitations imposed by
-    the official operating system of your device. Such actions could expose your phone to malware,
-    viruses, malicious programs, compromise your phone's security features, and may result in the
-    Applications not functioning correctly or at all.</p>
+    <main class="legal-content">
+        <p>These terms and conditions apply to the mobile applications (hereby referred to as "Applications") for mobile devices that were created by Ardeo Studio (hereby referred to as "Service Provider") as Freemium services.</p>
 
-<h4>Third-party Services</h4>
-<p>Please note that the Applications utilize third-party services that have their own Terms and
-    Conditions. Below are the links to the Terms and Conditions of the third-party service providers
-    used by the Applications:</p>
-<ul>
-    <li><a href="https://policies.google.com/terms" target="_blank">Google Play Services</a></li>
-    <li><a href="https://developers.google.com/admob/terms" target="_blank">AdMob</a></li>
-    <li><a href="https://firebase.google.com/terms/analytics" target="_blank">Google Analytics for
-        Firebase</a></li>
-    <li><a href="https://firebase.google.com/terms/crashlytics" target="_blank">Firebase
-        Crashlytics</a></li>
-</ul>
+        <p>Upon downloading or utilizing the Applications, you are automatically agreeing to the following terms. It is strongly advised that you thoroughly read and understand these terms prior to using the Applications. Unauthorized copying, modification of the Applications, any part of the Applications, or our trademarks is strictly prohibited. Any attempts to extract the source code of the Applications, translate the Applications into other languages, or create derivative versions are not permitted. All trademarks, copyrights, database rights, and other intellectual property rights related to the Applications remain the property of the Service Provider.</p>
 
-<h4>Internet and Data Usage</h4>
-<p>Please be aware that the Service Provider does not assume responsibility for certain aspects.
-    Some functions of the Applications require an active internet connection, which can be Wi-Fi or
-    provided by your mobile network provider. The Service Provider cannot be held responsible if the
-    Applications do not function at full capacity due to lack of access to Wi-Fi or if you have
-    exhausted your data allowance.</p>
+        <p>The Service Provider is dedicated to ensuring that the Applications are as beneficial and efficient as possible. As such, they reserve the right to modify the Applications or charge for their services at any time and for any reason. The Service Provider assures you that any charges for the Applications or their services will be clearly communicated to you.</p>
 
-<p>If you are using the Applications outside of a Wi-Fi area, please be aware that your mobile
-    network provider's agreement terms still apply. Consequently, you may incur charges from your
-    mobile provider for data usage during the connection to the Applications, or other third-party
-    charges. By using the Applications, you accept responsibility for any such charges, including
-    roaming data charges if you use the Applications outside of your home territory (i.e., region or
-    country) without disabling data roaming. If you are not the bill payer for the device on which
-    you are using the Applications, we assume that you have obtained permission from the bill
-    payer.</p>
+        <p>The Applications store and process personal data that you have provided to the Service Provider in order to provide the Service. It is your responsibility to maintain the security of your phone and access to the Applications. The Service Provider strongly advises against jailbreaking or rooting your phone, which involves removing software restrictions and limitations imposed by the official operating system of your device. Such actions could expose your phone to malware, viruses, malicious programs, compromise your phone's security features, and may result in the Applications not functioning correctly or at all.</p>
 
-<p>Similarly, the Service Provider cannot always assume responsibility for your usage of the
-    Applications. For instance, it is your responsibility to ensure that your device remains charged.
-    If your device runs out of battery and you are unable to access the Service, the Service
-    Provider cannot be held responsible.</p>
+        <h4>Third-party Services</h4>
+        <p>Please note that the Applications utilize third-party services that have their own Terms and Conditions. Below are the links to the Terms and Conditions of the third-party service providers used by the Applications:</p>
+        <ul>
+            <li><a href="https://policies.google.com/terms" target="_blank">Google Play Services</a></li>
+            <li><a href="https://developers.google.com/admob/terms" target="_blank">AdMob</a></li>
+            <li><a href="https://firebase.google.com/terms/analytics" target="_blank">Google Analytics for Firebase</a></li>
+            <li><a href="https://firebase.google.com/terms/crashlytics" target="_blank">Firebase Crashlytics</a></li>
+        </ul>
 
-<h4>Liability</h4>
-<p>In terms of the Service Provider's responsibility for your use of the Applications, it is
-    important to note that while they strive to ensure that they are updated and accurate at all times,
-    they do rely on third parties to provide information to them so that they can make it available
-    to you. The Service Provider accepts no liability for any loss, direct or indirect, that you
-    experience as a result of relying entirely on this functionality of the Applications.</p>
+        <h4>Internet and Data Usage</h4>
+        <p>Please be aware that the Service Provider does not assume responsibility for certain aspects. Some functions of the Applications require an active internet connection, which can be Wi-Fi or provided by your mobile network provider. The Service Provider cannot be held responsible if the Applications do not function at full capacity due to lack of access to Wi-Fi or if you have exhausted your data allowance.</p>
 
-<p>The Service Provider may wish to update the Applications at some point. The Applications are
-    currently available as per the requirements for the operating system (and for any additional
-    systems they decide to extend the availability of the Applications to) may change, and you will
-    need to download the updates if you want to continue using the Applications. The Service Provider
-    does not guarantee that it will always update the Applications so that they are relevant to you
-    and/or compatible with the particular operating system version installed on your device.
-    However, you agree to always accept updates to the Applications when offered to you. The Service
-    Provider may also wish to cease providing the Applications and may terminate their use at any time
-    without providing termination notice to you. Unless they inform you otherwise, upon any
-    termination, (a) the rights and licenses granted to you in these terms will end; (b) you must
-    cease using the Applications, and (if necessary) delete them from your device.</p>
+        <p>If you are using the Applications outside of a Wi-Fi area, please be aware that your mobile network provider's agreement terms still apply. Consequently, you may incur charges from your mobile provider for data usage during the connection to the Applications, or other third-party charges. By using the Applications, you accept responsibility for any such charges, including roaming data charges if you use the Applications outside of your home territory (i.e., region or country) without disabling data roaming. If you are not the bill payer for the device on which you are using the Applications, we assume that you have obtained permission from the bill payer.</p>
 
-<h4>Changes to These Terms and Conditions</h4>
-<p>The Service Provider may periodically update their Terms and Conditions. Therefore, you are
-    advised to review this page regularly for any changes. The Service Provider will notify you of
-    any changes by posting the new Terms and Conditions on this page.</p>
+        <p>Similarly, the Service Provider cannot always assume responsibility for your usage of the Applications. For instance, it is your responsibility to ensure that your device remains charged. If your device runs out of battery and you are unable to access the Service, the Service Provider cannot be held responsible.</p>
 
-<p>These terms and conditions are effective as of 2026-04-02</p>
+        <h4>Liability</h4>
+        <p>In terms of the Service Provider's responsibility for your use of the Applications, it is important to note that while they strive to ensure that they are updated and accurate at all times, they do rely on third parties to provide information to them so that they can make it available to you. The Service Provider accepts no liability for any loss, direct or indirect, that you experience as a result of relying entirely on this functionality of the Applications.</p>
 
-<h4>Contact Us</h4>
-<p>If you have any questions or suggestions about the Terms and Conditions, please do not hesitate
-    to contact the Service Provider at <a href="mailto:nguyenhunghung2806@gmail.com">nguyenhunghung2806@gmail.com</a>.
-</p>
+        <p>The Service Provider may wish to update the Applications at some point. The Applications are currently available as per the requirements for the operating system (and for any additional systems they decide to extend the availability of the Applications to) may change, and you will need to download the updates if you want to continue using the Applications. The Service Provider does not guarantee that it will always update the Applications so that they are relevant to you and/or compatible with the particular operating system version installed on your device. However, you agree to always accept updates to the Applications when offered to you. The Service Provider may also wish to cease providing the Applications and may terminate their use at any time without providing termination notice to you. Unless they inform you otherwise, upon any termination, (a) the rights and licenses granted to you in these terms will end; (b) you must cease using the Applications, and (if necessary) delete them from your device.</p>
+
+        <h4>Changes to These Terms and Conditions</h4>
+        <p>The Service Provider may periodically update their Terms and Conditions. Therefore, you are advised to review this page regularly for any changes. The Service Provider will notify you of any changes by posting the new Terms and Conditions on this page.</p>
+
+        <p>These terms and conditions are effective as of 2026-04-02</p>
+
+        <h4>Contact Us</h4>
+        <p>If you have any questions or suggestions about the Terms and Conditions, please do not hesitate to contact the Service Provider at <a href="mailto:nguyenhunghung2806@gmail.com">nguyenhunghung2806@gmail.com</a>.</p>
+    </main>
+
+    <footer>
+        <p>© 2026 Ardeo Studio. All rights reserved.</p>
+        <div style="margin-top: 10px;">
+            <a href="privacy_policy.html">Chính sách bảo mật</a> | 
+            <a href="term_of_use.html">Điều khoản sử dụng</a>
+        </div>
+    </footer>
+
 </body>
 </html>
