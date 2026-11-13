@@ -329,7 +329,7 @@
                     return [appId, card.querySelector('p').textContent];
                 }));
                 const cards = document.createDocumentFragment();
-                for (const app of apps) {
+                for (const app of apps.slice(0, 5)) {
                     const iconUrl = new URL(app.icon);
                     if (typeof app.appId !== 'string' || !/^[\w]+(?:\.[\w]+)+$/.test(app.appId) ||
                         typeof app.title !== 'string' || !app.title.trim() ||
