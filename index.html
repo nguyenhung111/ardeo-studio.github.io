@@ -314,5 +314,50 @@
         </div>
     </footer>
 
+    <script>
+        async function syncAppCards() {
+            const catalogUrl = 'https://raw.githubusercontent.com/nguyenhung111/ardeo-studio.github.io/main/apps.json';
+            try {
+                const response = await fetch(catalogUrl, { signal: AbortSignal.timeout(5000) });
+                if (!response.ok) return;
+                const apps = await response.json();
+                if (!Array.isArray(apps) || apps.length === 0) return;
+
+                const cards = document.createDocumentFragment();
+                for (const app of apps) {
+                    const iconUrl = new URL(app.icon);
+                    if (typeof app.appId !== 'string' || !/^[\w]+(?:\.[\w]+)+$/.test(app.appId) ||
+                        typeof app.title !== 'string' || !app.title.trim() ||
+                        iconUrl.protocol !== 'https:' || !iconUrl.hostname.endsWith('.googleusercontent.com')) {
+                        return;
+                    }
+
+                    const card = document.createElement('div');
+                    card.className = 'app-card';
+                    const icon = document.createElement('img');
+                    icon.className = 'app-icon';
+                    icon.src = iconUrl.href;
+                    icon.alt = app.title + ' Icon';
+                    const title = document.createElement('h3');
+                    title.textContent = app.title;
+                    const summary = document.createElement('p');
+                    summary.textContent = app.summary || '';
+                    const link = document.createElement('a');
+                    link.className = 'btn-playstore';
+                    link.href = 'https://play.google.com/store/apps/details?id=' + encodeURIComponent(app.appId);
+                    link.target = '_blank';
+                    link.rel = 'noopener';
+                    link.textContent = 'Get it on Google Play';
+                    card.append(icon, title, summary, link);
+                    cards.append(card);
+                }
+                document.querySelector('.products').replaceChildren(cards);
+            } catch (error) {
+                console.warn('Could not load the Google Play app catalog', error);
+            }
+        }
+
+        syncAppCards();
+    </script>
 </body>
 </html>
